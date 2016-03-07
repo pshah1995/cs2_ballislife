@@ -9,14 +9,14 @@ Player::Player(Side side) {
     // Will be set to true in test_minimax.cpp.
     testingMinimax = false;
     Board board = new board();
-    int turn;
+    int turn; // turn will be used to decide if the player goes first or second
     if(side == "BLACK")
     {
-    	turn = 1;
+    	turn = 1; // start turn at one if the side is black
     }
     else
     {
-    	turn = 2;
+    	turn = 2; // 2 if else
     }
 
     /* 
