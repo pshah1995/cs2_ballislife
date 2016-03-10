@@ -13,18 +13,21 @@ Player::Player(Side side) {
 	//fprintf(stderr, "%d\n", "123");
 
     testingMinimax = false;
-    Board board = new board();
-    int turn; // turn will be used to decide if the player goes first or second
-    if(side == "BLACK")
+
+    //initialize all my variables
+    board = new Board();
+    me = side;
+    move = NULL;
+
+    //assign side for my opponent
+    if (side == BLACK)
     {
-    	turn = 1; // start turn at one if the side is black
+        opp = WHITE;
     }
     else
     {
-    	turn = 2; // 2 if else
-
+        opp = BLACK;
     }
-
     /* 
      * TODO: Do any initialization you need to do here (setting up the board,
      * precalculating things, etc.) However, remember that you will only have
